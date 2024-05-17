@@ -1,0 +1,42 @@
+{
+  "cli": {
+    "version": ">= 7.5.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_KEY": "AIzaSyC_puY9lOdJN2hZV0UbAvoNQP5SGGiB1S4",
+        "EXPO_PUBLIC_AUTH_DOMAIN": "visionfollower-9672a.firebaseapp.com",
+        "EXPO_PUBLIC_PROJECT_ID": "visionfollower-9672a",
+        "EXPO_PUBLIC_STORAGE_BUCKET": "visionfollower-9672a.appspot.com",
+        "EXPO_PUBLIC_MESSAGING_SENDER_ID": "925092527075",
+        "EXPO_PUBLIC_APP_ID": "1: 925092527075:web:cbed9222033dcb69313ed6",
+        "EXPO_PUBLIC_MEASUREMENT_ID": "G-PWR788873V"
+      }
+    },
+    "production": {
+      "env": {
+        "EXPO_PUBLIC_API_KEY": "AIzaSyC_puY9lOdJN2hZV0UbAvoNQP5SGGiB1S4",
+        "EXPO_PUBLIC_AUTH_DOMAIN": "visionfollower-9672a.firebaseapp.com",
+        "EXPO_PUBLIC_PROJECT_ID": "visionfollower-9672a",
+        "EXPO_PUBLIC_STORAGE_BUCKET": "visionfollower-9672a.appspot.com",
+        "EXPO_PUBLIC_MESSAGING_SENDER_ID": "925092527075",
+        "EXPO_PUBLIC_APP_ID": "1: 925092527075:web:cbed9222033dcb69313ed6",
+        "EXPO_PUBLIC_MEASUREMENT_ID": "G-PWR788873V"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
