@@ -36,16 +36,12 @@
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "Allow BlindSpotter to use your location.",
+          "locationAlwaysAndWhenInUsePermission": "Allow 0VisionFollower to use your location.",
           "isAndroidBackgroundLocationEnabled": true,
           "isAndroidForegroundServiceEnabled": true
         }
       ]
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "4dbb5190-2a2d-4830-8ad8-5fc636635072"
-      }
-    }
+    ]
+   
   }
 }
