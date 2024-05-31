@@ -1,4 +1,4 @@
-import { View, Text, TextInput } from "react-native";
+import { View, Text, TextInput, Image } from "react-native";
 import React, { useState } from "react";
 
 import { Style } from "./SignUp.Style";
@@ -14,6 +14,7 @@ import { doc, setDoc } from "firebase/firestore";
 const SignUp = ({ navigation }) => {
   const [FullName, setFullName] = useState("");
   const [Email, setEmail] = useState("");
+  const [Number, setNumber] = useState("");
   const [Password, setPassword] = useState("");
   const [ConfirmPass, setConfirmPass] = useState(null);
 
@@ -31,6 +32,7 @@ const SignUp = ({ navigation }) => {
           // add the data to firestore 
           await setDoc(doc(FIREBASE_FIRESTORE, "users", user.uid), {
             Name: FullName,
+            Number: Number,
             Type: 'Patient',
             Location: {
               altitude: 0,
@@ -41,7 +43,7 @@ const SignUp = ({ navigation }) => {
         })
         .catch((error) => {
           const errorCode = error.code;
-          const errorMessage = error.message;
+          const errorMessage = error.message;a
           setEmail(errorMessage);
         });
     }
@@ -49,6 +51,9 @@ const SignUp = ({ navigation }) => {
 
   return (
     <View style={Style.container}>
+      <Image source={require('./imgg/LOGO.png')}
+        style={{ width: 170, height: 170 }}
+      />
       <Text style={Style.Title}>Sign Up</Text>
       <TextInput
         style={Style.TextInput}
@@ -59,6 +64,11 @@ const SignUp = ({ navigation }) => {
         style={Style.TextInput}
         placeholder="Email"
         onChangeText={(Text) => setEmail(Text)}
+      />
+      <TextInput
+        style={Style.TextInput}
+        placeholder="Phone Number"
+        onChangeText={(Text) => setNumber(Text)}
       />
       <TextInput
         style={Style.TextInput}

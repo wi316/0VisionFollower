@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { View, Text, TextInput } from "react-native";
+import { View, Text, TextInput, Image } from "react-native";
 import Button from "../../Components/Button/Button";
 import React from "react";
 import { Style } from "./SignIn.Style";
@@ -30,6 +30,9 @@ const SignIn = ({ navigation }) => {
 
   return (
     <View style={Style.container}>
+      <Image source={require('./img/LOGO.png')} 
+        style={{ width: 170, height: 170 }}
+         />
       <Text style={Style.Title}>Sign In</Text>
       <TextInput
         style={Style.TextInput}
@@ -40,14 +43,14 @@ const SignIn = ({ navigation }) => {
         style={Style.TextInput}
         placeholder="Password"
         onChangeText={(Text) => setPassword(Text)}
-        secureTextEntry={ true }
+        secureTextEntry={true}
       />
 
       {error ? <Text style={Style.Error}>{`${error}`}</Text> : ""}
 
       <Button title="Sign In" onPress={SignInFireBase} />
 
-      <Text>Don't have an account ?</Text>
+      <Text>Never created an account yet ?</Text>
       <Text style={Style.SignUp} onPress={() => navigation.navigate("SignUp")}>
         Sign Up
       </Text>
