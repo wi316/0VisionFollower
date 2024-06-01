@@ -17,16 +17,14 @@ const SignIn = ({ navigation }) => {
   const SignInFireBase = async () => {
     try {
       const res = await signInWithEmailAndPassword(auth, Email, Password);
-      // navigation.navigate('Home', {user: res})
+      
     } catch (error) {
       console.log(error);
       setError(error);
     }
   };
 
-  // view => div
-  // text => h1
-  // Textinput => input 
+ 
 
   return (
     <View style={Style.container}>

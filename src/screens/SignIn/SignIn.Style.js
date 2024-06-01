@@ -11,7 +11,7 @@ export const Style = StyleSheet.create({
     marginTop: 10,
     height: 40,
     width: 200,
-    // margin: 12,
+    
     borderWidth: 1,
     padding: 10,
   },

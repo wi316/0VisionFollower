@@ -8,15 +8,15 @@ class localStorage {
     try {
       const value = await AsyncStorage.getItem("UserID");
       if (value !== null) {
-        // We have data!!
+        
         ID = value;
-        // console.log('testing => ', value)
+        
         return ID;
       } else {
         console.log("NON data");
       }
     } catch (error) {
-      // Error retrieving data
+      
       console.error(error);
     }
   }
@@ -25,7 +25,7 @@ class localStorage {
     try {
       await AsyncStorage.setItem(key, value);
     } catch (error) {
-      // Error saving data
+      
       console.error(error);
     }
   }

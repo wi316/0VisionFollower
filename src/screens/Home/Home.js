@@ -20,7 +20,7 @@ export default function Home() {
         const DocRef = doc(FIREBASE_FIRESTORE, "users", userID);
         const docSnap = await getDoc(DocRef);
         setUser({ id: userID, ...docSnap.data() });
-        // console.log({ id: userID, ...docSnap.data() });
+       
 
         LocalStorage.storeData("UserID", userID)
       }
