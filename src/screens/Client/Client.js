@@ -51,7 +51,7 @@ TaskManager.defineTask(LOCATION_TASK_NAME, async () => {
     await updateDoc(UserRef, {
       
       Location: {
-        altitude: location.coords.altitude,
+        latitude: location.coords.latitude,
         longitude: location.coords.longitude,
       },
     });
@@ -82,7 +82,7 @@ const Client = (props) => {
       await updateDoc(UserRef, {
         
         Location: {
-          altitude: location.coords.altitude,
+          latitude: location.coords.latitude,
           longitude: location.coords.longitude,
         },
       });
@@ -106,7 +106,7 @@ const Client = (props) => {
         }}
       />
 
-      <Text>altitude : {coords ? coords.altitude : ""}</Text>
+      <Text>latitude : {coords ? coords.latitude : ""}</Text>
       <Text>longitude : {coords ? coords.longitude : ""}</Text>
 
       <Text>{errorMsg ? errorMsg : ""}</Text>

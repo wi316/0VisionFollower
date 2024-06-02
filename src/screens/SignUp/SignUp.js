@@ -35,7 +35,7 @@ const SignUp = ({ navigation }) => {
             Number: Number,
             Type: 'Patient',
             Location: {
-              altitude: 0,
+              latitude: 0,
               longitude: 0
             }
           })

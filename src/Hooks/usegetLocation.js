@@ -5,7 +5,7 @@ export default function usegetLocation() {
   const [errorMsg, setErrorMsg] = useState(null);
   const [coords, setCoords] = useState({
     longitude: null,
-    altitude: null,
+    latitude: null,
   });
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function usegetLocation() {
       let location = await Location.getCurrentPositionAsync({});
       setCoords({
         longitude: location.coords.longitude,
-        altitude: location.coords.altitude,
+        latitude: location.coords.latitude,
       });
     })();
   }, []);

@@ -17,7 +17,7 @@ const ClientDetails = ({ route }) => {
         title="see location"
         onPress={() => {
           Linking.openURL(
-            `https://www.google.com/maps/search/?api=1&query=${User.Location.altitude},${User.Location.longitude}`
+            `https://www.google.com/maps/search/?api=1&query=${User.Location.latitude},${User.Location.longitude}`
           );
         }}
       />
